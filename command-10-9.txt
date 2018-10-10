@@ -1,0 +1,39 @@
+      who
+      pwd
+      ssh-keygen 
+      ifconfig 
+      ssh-copy-id 172.31.18.153
+     cat /etc/ansible/hosts
+     ansible apacheweb -m ping 
+     ansible appserver -m ping 
+     ifconfig 
+     cat /etc/ansible/hosts
+     ansible appserver -m ping 
+     sudo sudors
+     sudo visudo
+     exit
+     yum update 
+     sudo yum update 
+     vi /etc/ansible/ansible.cfg 
+     ssh-copy-id localhost
+     ssh-copy-id localhost.localdomain
+     ansible local -m ping 
+     ansible all -m ping 
+     sudo cat /etc/ansible/hosts
+     ansible all --list-hosts
+     ansible apacheweb --list-hosts
+     ansible all -m ping 
+     exit
+     ansible all -m ping 
+     ansible apacheweb -s -m shell -a 'yum list installed | grep python' 
+     ansible all -s -m shell -a 'yum install telnet'
+     ansible all -s -m shell -a 'yum install telnet -y'
+     ansible all -s -m shell -a 'yum install lynx -y'
+     ansible all -s -m shell -a 'yum install emacs -y'
+     history 
+     ansible local -m setup | more
+     
+     ansible appserver -m setup -a 'filter=ansible_ip*'
+     ansible appserver -m setup -a 'filter=*ipv4**'
+     ansible appserver -m setup -a 'filter=*ipv4*'
+ 
