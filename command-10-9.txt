@@ -1,39 +1,86 @@
-      who
-      pwd
-      ssh-keygen 
-      ifconfig 
-      ssh-copy-id 172.31.18.153
-     cat /etc/ansible/hosts
-     ansible apacheweb -m ping 
-     ansible appserver -m ping 
-     ifconfig 
-     cat /etc/ansible/hosts
-     ansible appserver -m ping 
-     sudo sudors
-     sudo visudo
-     exit
-     yum update 
-     sudo yum update 
-     vi /etc/ansible/ansible.cfg 
-     ssh-copy-id localhost
-     ssh-copy-id localhost.localdomain
-     ansible local -m ping 
-     ansible all -m ping 
-     sudo cat /etc/ansible/hosts
-     ansible all --list-hosts
-     ansible apacheweb --list-hosts
-     ansible all -m ping 
-     exit
-     ansible all -m ping 
-     ansible apacheweb -s -m shell -a 'yum list installed | grep python' 
-     ansible all -s -m shell -a 'yum install telnet'
-     ansible all -s -m shell -a 'yum install telnet -y'
-     ansible all -s -m shell -a 'yum install lynx -y'
-     ansible all -s -m shell -a 'yum install emacs -y'
-     history 
-     ansible local -m setup | more
-     
-     ansible appserver -m setup -a 'filter=ansible_ip*'
-     ansible appserver -m setup -a 'filter=*ipv4**'
-     ansible appserver -m setup -a 'filter=*ipv4*'
- 
+    1  who
+    2  pwd
+    3  ssh-keygen 
+    4  ifconfig 
+    5  ssh-copy-id 172.31.18.153
+    6  ssh 172.31.18.153
+    7  ssh-copy-id 172.31.22.171
+    8  ssh 172.31.22.171
+    9  exit
+   10  ssh test@saineel142
+   11  ssh test@saineel143
+   12  exit
+   13  cat /etc/ansible/hosts
+   14  ansible apacheweb -m ping 
+   15  ansible appserver -m ping 
+   16  ifconfig 
+   17  ssh test@saineel143
+   18  cat /etc/ansible/hosts
+   19  ansible appserver -m ping 
+   20  sudo sudors
+   21  sudo visudo
+   22  exit
+   23  yum update 
+   24  sudo yum update 
+   25  vi /etc/ansible/ansible.cfg 
+   26  ssh-copy-id localhost
+   27  ssh-copy-id localhost.localdomain
+   28  ansible local -m ping 
+   29  ansible all -m ping 
+   30  ssh test@saineel143
+   31  sudo cat /etc/ansible/hosts
+   32  ansible all --list-hosts
+   33  ansible apacheweb --list-hosts
+   34  ansible all -m ping 
+   35  exit
+   36  ansible all -m ping 
+   37  ansible apacheweb -s -m shell -a 'yum list installed | grep python' 
+   38  ansible all -s -m shell -a 'yum install telnet'
+   39  ansible all -s -m shell -a 'yum install telnet -y'
+   40  ansible all -s -m shell -a 'yum install lynx -y'
+   41  ansible all -s -m shell -a 'yum install emacs -y'
+   42  history 
+   43  ansible local -m setup | more
+   44  cat /tmp/facts
+   45  cd /etc/
+   46  ls
+   47  ls | grep fact
+   48  cd
+   49  exit
+   50  su -
+   51  cd /etc/
+   52  cd
+   53  ansible appserver -m setup -a 'filter=ansible_ip*'
+   54  ansible appserver -m setup -a 'filter=*ipv4**'
+   55  ansible appserver -m setup -a 'filter=*ipv4*'
+   56  history 
+   57  history > 10-9-18.txt
+   58  cat 10-9-18.txt 
+   59  history 
+   60  git clone https://github.com/saurjain108/ansible.git
+   61  sudo yum install git
+   62  git clone https://github.com/saurjain108/ansible.git
+   63  sudo yum install git
+   64  git clone https://github.com/saurjain108/ansible.git
+   65  ls
+   66  cd ansible/
+   67  ls
+   68  git add *
+   69  git status 
+   70  touch abc.txt
+   71  git add *
+   72  git status 
+   73  git commit -m "new"
+   74  git config --global rony.jain108@gmail.com
+   75  git config --global user.email rony.jain108@gmail.com
+   76  git config --global user.email "rony.jain108@gmail.com"
+   77  git config --global user.name "Raunak jain"
+   78  git commit -m "new"
+   79  git push 
+   80  cd
+   81  cat /etc/ansible/hosts
+   82  ansible apacheweb -m setup -a 'filter=ansible*'
+   83  ansible apacheweb -m setup -a 'filter=ansible_arch*'
+   84  ansible apacheweb -m setup -a 'filter=ansible_dist*'
+   85  pwd
+   86  history > /home/test/ansible/command-10-9.txt 
