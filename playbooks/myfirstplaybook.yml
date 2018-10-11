@@ -12,3 +12,8 @@
   vars_prompt:
     - name: web_domain
       prompt: web domain  
+  tasks:
+    - name: Install lynx web browser
+      action: yum name=lynx state=installed
+    - name: Check for telnet client
+      action: yum name=telnet state=absent
