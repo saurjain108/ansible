@@ -1,0 +1,12 @@
+#- perform on webser
+#- test user
+#- sudo rights 
+#- date and time stamps 
+#- install apache web serviers 
+#- start web server
+#- verify that server is running 
+#- install client software(telnet)
+#- log all packages installed in a server 
+#- date and time stamp of when the playbook ends 
+
+
