@@ -1,5 +1,5 @@
 --- # My First YAML Playbook for Ansible
-- hosts: apacheweb
+- hosts: all
   user: test
   sudo: yes
   connection: ssh
@@ -12,6 +12,8 @@
   tasks:
    - name: Install Apache Web Server
      action: yum name=httpd state=installed
+     async: 300
+     poll: 3
      notify: Restart HTTPD
   handlers:
   - name: Restart HTTPD
