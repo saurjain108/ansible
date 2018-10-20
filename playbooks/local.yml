@@ -1,0 +1,7 @@
+--- #local action playboo
+- hosts: 127.0.0.1
+  connection: local
+  sudo: yes
+  tasks:
+    - name: Installing telnet client
+      yum: pkg=telnet state=latest

@@ -1,0 +1,17 @@
+--- # for condition 
+- hosts: aptserver
+  user: test
+  sudo: yes
+  connection: ssh
+  vars:
+    playbook_type: conditional example
+  vars_files: 
+    - conf/copyright.yml
+    - conf/webdefaults.yml
+  tasks:
+    - name: Installing apache to the distribution type debina
+      command: apt-get -y install apache2
+      when: ansible_os_family == "Debian" 
+    - name: Inastall apache appropriate to the distribution type centos
+      command: yum -y install httpd
+      when: ansible_os_family == "RedHat"
