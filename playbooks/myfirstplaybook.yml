@@ -1,5 +1,5 @@
 --- # My First YAML Playbook for Ansible
-- hosts: all
+- hosts: apacheweb
   user: test
   sudo: yes
   connection: ssh
@@ -9,12 +9,17 @@
   vars_files:
    - conf/copyright.yml
    - conf/webdefaults.yml
+  vars_prompt:
+   - name: pkg_name
+     prompt: Which package you would like to install
   tasks:
    - name: Install Apache Web Server
      action: yum name=httpd state=installed
-     async: 300
-     poll: 3
+#     async: 300
+#     poll: 3
      notify: Restart HTTPD
+   - name: Install Lynx web browser 
+     action: yum name={{ pkg_name }} state=installed 
   handlers:
   - name: Restart HTTPD
     action: service name=httpd state=restarted
