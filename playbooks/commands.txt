@@ -1,0 +1,595 @@
+    1  who
+    2  pwd
+    3  ssh-keygen 
+    4  ifconfig 
+    5  ssh-copy-id 172.31.18.153
+    6  ssh 172.31.18.153
+    7  ssh-copy-id 172.31.22.171
+    8  ssh 172.31.22.171
+    9  exit
+   10  ssh test@saineel142
+   11  ssh test@saineel143
+   12  exit
+   13  cat /etc/ansible/hosts
+   14  ansible apacheweb -m ping 
+   15  ansible appserver -m ping 
+   16  ifconfig 
+   17  ssh test@saineel143
+   18  cat /etc/ansible/hosts
+   19  ansible appserver -m ping 
+   20  sudo sudors
+   21  sudo visudo
+   22  exit
+   23  yum update 
+   24  sudo yum update 
+   25  vi /etc/ansible/ansible.cfg 
+   26  ssh-copy-id localhost
+   27  ssh-copy-id localhost.localdomain
+   28  ansible local -m ping 
+   29  ansible all -m ping 
+   30  ssh test@saineel143
+   31  sudo cat /etc/ansible/hosts
+   32  ansible all --list-hosts
+   33  ansible apacheweb --list-hosts
+   34  ansible all -m ping 
+   35  exit
+   36  ansible all -m ping 
+   37  ansible apacheweb -s -m shell -a 'yum list installed | grep python' 
+   38  ansible all -s -m shell -a 'yum install telnet'
+   39  ansible all -s -m shell -a 'yum install telnet -y'
+   40  ansible all -s -m shell -a 'yum install lynx -y'
+   41  ansible all -s -m shell -a 'yum install emacs -y'
+   42  history 
+   43  ansible local -m setup | more
+   44  cat /tmp/facts
+   45  cd /etc/
+   46  ls
+   47  ls | grep fact
+   48  cd
+   49  exit
+   50  su -
+   51  cd /etc/
+   52  cd
+   53  ansible appserver -m setup -a 'filter=ansible_ip*'
+   54  ansible appserver -m setup -a 'filter=*ipv4**'
+   55  ansible appserver -m setup -a 'filter=*ipv4*'
+   56  history 
+   57  history > 10-9-18.txt
+   58  cat 10-9-18.txt 
+   59  history 
+   60  git clone https://github.com/saurjain108/ansible.git
+   61  sudo yum install git
+   62  git clone https://github.com/saurjain108/ansible.git
+   63  sudo yum install git
+   64  git clone https://github.com/saurjain108/ansible.git
+   65  ls
+   66  cd ansible/
+   67  ls
+   68  git add *
+   69  git status 
+   70  touch abc.txt
+   71  git add *
+   72  git status 
+   73  git commit -m "new"
+   74  git config --global rony.jain108@gmail.com
+   75  git config --global user.email rony.jain108@gmail.com
+   76  git config --global user.email "rony.jain108@gmail.com"
+   77  git config --global user.name "Raunak jain"
+   78  git commit -m "new"
+   79  git push 
+   80  cd
+   81  cat /etc/ansible/hosts
+   82  ansible apacheweb -m setup -a 'filter=ansible*'
+   83  ansible apacheweb -m setup -a 'filter=ansible_arch*'
+   84  ansible apacheweb -m setup -a 'filter=ansible_dist*'
+   85  pwd
+   86  history > /home/test/ansible/command-10-9.txt 
+   87  cd ansible/
+   88  git add *
+   89  git status 
+   90  git commit -m "commands on 10-9"
+   91  git push 
+   92  ansible apacheweb -m setup -a 'filter=ansible_domain'
+   93  ansible apacheweb -m setup -a 'filter=ansible_fq*'
+   94  ansible apacheweb -m setup -a 'filter=ansible_interf*'
+   95  ansible apacheweb -m setup -a 'filter=ansible_kern*'
+   96  ansible apacheweb -m setup -a 'filter=ansible_interf*'
+   97  ansible apacheweb -m setup -a 'filter=ansible_memt**'
+   98  ansible apacheweb -m setup -a 'filter=ansible_proc**'
+   99  ansible apacheweb -m setup -a 'filter=ansible_virt*'
+  100  ls
+  101  ansible apacheweb -m setup -a 'filter=ansible_virt*'
+  102  ansible all -m setup -a 'filter=ansible_virt*'
+  103  ansible all -m ping 
+  104  ansible all -a 'ls'
+  105  ls
+  106  ansible local -s -m yum shell -a 'yum install lynx'
+  107  ansible local -s -m shell -a 'yum install lynx'
+  108  cat /etc/ansible/hosts
+  109  ansible apacheweb -s -m yum -a 'pkg=lynx state=installed update_cache=true'
+  110  ansible apacheweb -s -m yum -a 'pkg=lynx state=disabled update_cache=true'
+  111  ansible apacheweb -s -m yum -a 'pkg=lynx state=installed update_cache=true'
+  112  ansible apacheweb -s -m yum -a 'pkg=lynx state=installed update_cache=true'
+  113  ls
+  114  cd playbooks/
+  115  vi appserver.yml
+  116  ansible-playbook appserver.yml 
+  117  vi appserver.yml
+  118  ansible-playbook -s appserver.yml 
+  119  vi appserver.yml
+  120  ansible-playbook -s appserver.yml 
+  121  cd
+  122  git add *
+  123  cd
+  124  git add *
+  125  cd ansible/
+  126  ls
+  127  mv ../playbooks/ .
+  128  ls
+  129  cd playbooks/
+  130  ansible-playbook -s appserver.yml 
+  131  cd
+  132  cd ansible/playbooks/
+  133  ls
+  134  cd ..
+  135  git add *
+  136  git status 
+  137  git commit -m "first yaml" 
+  138  git push 
+  139  ls
+  140  vi playbooks/appserver.yml 
+  141  ansible-playbook -s appserver.yml 
+  142  ls
+  143  cd playbooks/
+  144  ansible-playbook -s appserver.yml 
+  145  vi vars.yml
+  146  ansible-playbook -s appserver.yml 
+  147  ls
+  148  ansible all --list-hosts
+  149  ls
+  150  cd ansible/
+  151  ls
+  152  vi playbooks/myfirstplaybook.yml
+  153  cd playbooks/
+  154  ansible-playbook myfirstplaybook.yml 
+  155  ansible all --list-hosts
+  156  cat /etc/ansible/hosts
+  157  pwd
+  158  ls
+  159  mkdir conf
+  160  cd conf/
+  161  vi copyright.yml
+  162  vi webdefaults.yml
+  163  cd ..
+  164  vi myfirstplaybook.yml 
+  165  ansible-playbook myfirstplaybook.yml 
+  166  ls
+  167  vi conf/copyright.yml 
+  168  vi conf/webdefaults.yml 
+  169  ansible-playbook myfirstplaybook.yml 
+  170  vi myfirstplaybook.yml 
+  171  ansible-playbook myfirstplaybook.yml 
+  172  cd
+  173  cd ansible/
+  174  git add *
+  175  git status
+  176  git commit -m "adding new files to ansible"
+  177  git push
+  178  ansible-doc -l 
+  179  ansible-doc -l > ansible-doc.txt
+  180  ll
+  181  ansible all --list-hosts
+  182  vim playbooks/myfirstplaybook.yml 
+  183  ansible-playbook myfirstplaybook.yml 
+  184  cd playbooks/
+  185  ansible-playbook myfirstplaybook.yml 
+  186  cd ..
+  187  git add *
+  188  git commit -m "updating firstplaybook"
+  189  git push
+  190  ansible all -m pin 
+  191  ansible all -m ping
+  192  cd
+  193  ansible all --list-hosts
+  194  cd ansible/playbooks/
+  195  vi myfirstplaybook.yml 
+  196  ansible-playbook myfirstplaybook.yml 
+  197  vi myfirstplaybook.yml 
+  198  ansible all -m ping 
+  199  ansible-playbook myfirstplaybook.yml 
+  200  vi myfirstplaybook.yml 
+  201  ansible-playbook myfirstplaybook.yml 
+  202  vi myfirstplaybook.yml 
+  203  ansible-playbook myfirstplaybook.yml 
+  204  vi myfirstplaybook.yml 
+  205  cd ansible/playbooks/
+  206  ansible-playbook myfirstplaybook.yml 
+  207  vi myfirstplaybook.yml 
+  208  ansible-playbook myfirstplaybook.yml 
+  209  vi myfirstplaybook.yml 
+  210  ansible-playbook myfirstplaybook.yml 
+  211  ansible all --list-hosts
+  212  cat /etc/ansible/hosts
+  213  vi myfirstplaybook.yml 
+  214  ansible-playbook myfirstplaybook.yml 
+  215  vi myfirstplaybook.yml 
+  216  ansible-playbook myfirstplaybook.yml 
+  217  ansible all -m ping 
+  218  ansible all --host-list 
+  219  vi myfirstplaybook.yml 
+  220  ls
+  221  cd ansible/
+  222  ls
+  223  cd playbooks/
+  224  ls
+  225  ansible all -m ping 
+  226  history 
+  227  ansible all --list-hosts
+  228  pwd
+  229  ls
+  230  cat appserver.yml 
+  231  cat myfirstplaybook.yml 
+  232  ansible-playbook myfirstplaybook.yml 
+  233  ERROR! 'handler' is not a valid attribute for a Play
+  234  vi myfirstplaybook.yml 
+  235  ansible-playbook myfirstplaybook.yml 
+  236  vi myfirstplaybook.yml 
+  237  ansible-playbook myfirstplaybook.yml 
+  238  vi myfirstplaybook.yml 
+  239  ansible-playbook myfirstplaybook.yml 
+  240  vi myfirstplaybook.yml 
+  241  ansible-playbook myfirstplaybook.yml 
+  242  vi myfirstplaybook.yml 
+  243  ansible-playbook myfirstplaybook.yml 
+  244  vi myfirstplaybook.yml 
+  245  ansible-playbook myfirstplaybook.yml 
+  246  vi myfirstplaybook.yml 
+  247  ansible-playbook myfirstplaybook.yml 
+  248  vi myfirstplaybook.yml 
+  249  ansible-playbook myfirstplaybook.yml 
+  250  vi myfirstplaybook.yml 
+  251  ansible-playbook myfirstplaybook.yml 
+  252  vi myfirstplaybook.yml 
+  253  ansible-playbook myfirstplaybook.yml 
+  254  vi myfirstplaybook.yml 
+  255  ls
+  256  mkdir outline
+  257  cd outline/
+  258  vi webserver.txt
+  259  cat webserver.txt 
+  260  vi webserver.txt
+  261  ansible all --list-hosts 
+  262  cat /etc/ansible/hosts
+  263  cp webserver.txt webserver.yml
+  264  vi webserver.yml 
+  265  ansible all --list-hosts 
+  266  cat /etc/ansible/hosts
+  267  ansible-playbook webserver.yml --check
+  268  ansible-playbook webserver.yml
+  269  cd
+  270  ls
+  271  cd /home/test/
+  272  cd ansible/playbooks/
+  273  ls
+  274  ll
+  275  cd outline/
+  276  vi webserver.
+  277  vi webserver.yml 
+  278  cd
+  279  cat /home/test/playbook*
+  280  cd ansible/playbooks/
+  281  cd outline/
+  282  cd
+  283  cd ansible/
+  284  git add *
+  285  git status 
+  286  git commit -m "adding a webserver.yml file"
+  287  git push 
+  288  ls
+  289  cd playbooks/
+  290  ls
+  291  ansible all ---host-list
+  292  ansible all --list-hosts
+  293  cat /etc/ansible/hosts
+  294  ansible-playbook webserver.yml --check
+  295  ls
+  296  cd outline/
+  297  ansible-playbook webserver.yml --check
+  298  ansible-playbook webserver.yml
+  299  cp webserver.yml webserver.yml.original
+  300  ls
+  301  cat webserver.yml.original 
+  302  vim webserver.yml
+  303  ls
+  304  cd ansible/
+  305  ls
+  306  cd
+  307  ansible all -m pin 
+  308  ansible all -m ping
+  309  ssh-copy-id 172.31.18.153
+  310  ssh 172.31.18.153
+  311  ssh @saineel142
+  312  ssh@saineel142
+  313  ssh saineel142
+  314  ssh saineel143
+  315  ansible all -m ping
+  316  ansible -- list-hosts
+  317  ansible --list-hosts
+  318  ansible all --list-hosts
+  319  cd
+  320  cat /etc/ansible/hosts
+  321  ansible all --list-hosts
+  322  ansible all -m pin 
+  323  ansible all -m ping
+  324  ansible all --list-host 
+  325  cat /etc/ansible/
+  326  cat /etc/ansible
+  327  cat /etc/ansible/hosts
+  328  ssh-copy-id 172.31.123.97
+  329  git status
+  330  ssh-copy-id 172.31.123.97
+  331  sudo ssh-copy-id 172.31.123.97
+  332  history 
+  333  cat ansible/playbooks/myfirstplaybook.yml 
+  334  ansible-playbook ansible/playbooks/myfirstplaybook.yml 
+  335  cd ansible/playbooks/
+  336  vi myfirstplaybook.yml 
+  337  pwd
+  338  ls
+  339  ansible-playbook myfirstplaybook.yml 
+  340  vi myfirstplaybook.yml 
+  341  ls
+  342  cd conf/
+  343  ls
+  344  cd ..
+  345  ls
+  346  vi myfirstplaybook.yml 
+  347  ls conf/
+  348  ansible-playbook myfirstplaybook.yml 
+  349  cat myfirstplaybook.yml 
+  350  cat /etc/ansible/hosts
+  351  ansible-playbook myfirstplaybook.yml --check
+  352  ansible-playbook myfirstplaybook.yml
+  353  ansible-playbook myfirstplaybook.yml --check
+  354  ansible-playbook myfirstplaybook.yml
+  355  cd ..
+  356  git status
+  357  git add *
+  358  git commit -m "updating playbook"
+  359  git push
+  360  ansible all --list-hosts
+  361  cat /etc/ansible/hosts
+  362  sudo yum remove httpd
+  363  ansible all -m ping 
+  364  vi playbooks/myfirstplaybook.yml 
+  365  cd playbooks/
+  366  ansible-playbook myfirstplaybook.yml 
+  367  vi playbooks/myfirstplaybook.yml 
+  368  vi myfirstplaybook.yml 
+  369  sudo yum remove httpd
+  370  ansible-playbook myfirstplaybook.yml 
+  371  ps aux | grep httpd
+  372  cd conf/
+  373  ls
+  374  vi webdefaults.yml 
+  375  cd ..
+  376  git status
+  377  git add playbooks/conf/webdefaults.yml playbooks/myfirstplaybook.yml 
+  378  git commit -m "updating and adding poll"
+  379  git push
+  380  vi playbooks/myfirstplaybook.yml 
+  381  cd playbooks/
+  382  ansible-playbook myfirstplaybook.yml 
+  383  vi myfirstplaybook.yml 
+  384  cd ..
+  385  ls
+  386  cd playbooks/
+  387  ls
+  388  vi conf/webdefaults.yml 
+  389  ansible-playbook myfirstplaybook.yml 
+  390  l
+  391  ls
+  392  vi myfirstplaybook.yml 
+  393  ansible-playbook myfirstplaybook.yml 
+  394  git add myfirstplaybook.yml 
+  395  vi myfirstplaybook.yml 
+  396  ansible-playbook myfirstplaybook.yml 
+  397  vi myfirstplaybook.yml 
+  398  ansible-playbook myfirstplaybook.yml 
+  399  vi myfirstplaybook.yml 
+  400  ansible-playbook myfirstplaybook.yml --check
+  401  ansible-playbook myfirstplaybook.yml
+  402  vi myfirstplaybook.yml 
+  403  ansible-playbook myfirstplaybook.yml
+  404  vi myfirstplaybook.yml 
+  405  cat conf/copyright.yml 
+  406  cat conf/webdefaults.yml 
+  407  vi myfirstplaybook.yml 
+  408  git add myfirstplaybook.yml 
+  409  vi myfirstplaybook.yml 
+  410  ansible-playbook myfirstplaybook.yml
+  411  systemctl status ansible 
+  412  ansible all -m ping 
+  413  ls
+  414  cd ansible/
+  415  ls
+  416  cd playbooks/
+  417  ansible all --list-hosts
+  418  cat /etc/ansible/hosts
+  419  cd conf/
+  420  ls
+  421  ll
+  422  vi webdefaults.yml 
+  423  ls
+  424  cd ..
+  425  vi myfirstplaybook.yml 
+  426  ansible-playbook myfirstplaybook.yml 
+  427  ansible all --list-hosts
+  428  cat /etc/ansible/hosts
+  429  ls
+  430  vi lookup.yml
+  431  vi lookup.csv
+  432  cat lookup.csv 
+  433  cat lookup.yml 
+  434  ansible-playbook lookup.yml --check 
+  435  ci lookup.yml 
+  436  vci lookup.yml 
+  437  vi lookup.yml 
+  438  ansible-playbook lookup.yml
+  439  cat lookup.yml 
+  440  cat lookup.csv 
+  441  vi lookup.yml 
+  442  vi lookup.csv 
+  443  ansible-playbook lookup.yml 
+  444  vi lookup.yml 
+  445  vi lookup.csv 
+  446  vi lookup.yml 
+  447  ansible-playbook lookup.yml 
+  448  vi lookup.yml 
+  449  ansible-playbook lookup.yml 
+  450  ssh saineel142
+  451  ansible-playbook lookup.yml 
+  452  vi lookup.yml 
+  453  ansible-playbook lookup.yml 
+  454  vi lookup.yml 
+  455  ansible-playbook lookup.yml 
+  456  cd ..
+  457  git add *
+  458  git status
+  459  cd ansible/
+  460  ls
+  461  git status
+  462  git commit -m "adding example for ansible lookup" 
+  463  git push 
+  464  ansible-playbook lookup.yml 
+  465  cd playbooks/
+  466  ansible-playbook lookup.yml 
+  467  ansible all --list-hosts
+  468  car /etc/ansible/hosts
+  469  cat /etc/ansible/hosts
+  470  vi runonce.yml
+  471  ls /home/test/
+  472  ansible-playbook runonce.yml 
+  473  vi runonce.yml
+  474  ansible-playbook runonce.yml 
+  475  ls /home/test/
+  476  ansible all --list-hosts
+  477  ls
+  478  ls /home/test/
+  479  cat /etc/ansible/hosts
+  480  ansible add *
+  481  git add *
+  482  ansible all --list-hosts
+  483  ls
+  484  ansible all --list-hosts
+  485  ll
+  486  vi local.yml
+  487  cat runonce.yml 
+  488  vi local.yml
+  489  ansible-playbook local.yml --check
+  490  sudo yum remove telnet 
+  491  ansible-playbook local.yml --check
+  492  ansible-playbook local.yml
+  493  git add *
+  494  cd ..
+  495  git add *
+  496  cd playbooks/
+  497  ls
+  498  vi loop.yml
+  499  ansible-playbook loop.yml 
+  500  vi loop.yml
+  501  ansible-playbook loop.yml 
+  502  cd ..
+  503  git add *
+  504  cd ansible/playbooks/
+  505  ls
+  506  cat loop.yml 
+  507  ls - al | grep raw
+  508  ls -al | grep raw
+  509  ls | grep raw
+  510  ls | grep -R raw
+  511  ansible all --list-hosts
+  512  cat /etc/ansible/hosts
+  513  vi when.tml
+  514  ls
+  515  vi when.yml
+  516  ssh-copy-id 172.31.34.30
+  517  ssh 172.31.34.30
+  518  vi cd
+  519  cd
+  520  sudo vi /etc/ansible/hosts
+  521  ansible all -m ping 
+  522  cd ansible/playbooks/
+  523  ld
+  524  ls
+  525  vi when.yml 
+  526  ansible apache -m setup setup -a 'filter=ansbie_os_family'
+  527  ansible apacheweb -m setup -a 'filter=ansbie_os_family'
+  528  ansible apacheweb -m setup -a 'filter=ansibe_os_family'
+  529  ansible apacheweb -m setup -a 'filter=ansible_os_family'
+  530  ansible all -m setup -a 'filter=ansible_os_family'
+  531  ansible-playbook when.yml 
+  532  vi when.yml 
+  533  ansible-playbook when.yml 
+  534  vi when.yml 
+  535  ansible-playbook when.yml 
+  536  vi when.yml 
+  537  ansible-playbook when.yml 
+  538  cd ../
+  539  git add *
+  540  cd playbooks/ 
+  541  ls
+  542  vi when.yml 
+  543  ansible-playbook when.yml 
+  544  cd ..
+  545  git add *
+  546  git commit -m " adding loop and conditional/when file"
+  547  git push
+  548  cd /proc/
+  549  cd
+  550  cd ansible/playbooks/
+  551  s
+  552  ansible all --list-hosts
+  553  cat /etc/ansible/hosts
+  554  vim until.yml
+  555  ansible-playbook until.yml 
+  556  cd ..
+  557  ansible add *
+  558  git add *
+  559  history 
+  560  git commit -m "adding until file"
+  561  git push
+  562  cd playbooks/
+  563  ansible-playbook until.yml '
+  564  ansible-playbook until.yml
+  565  vi notify.yml
+  566  ansible-playbook notify.yml 
+  567  vi notify.yml
+  568  ansible-playbook notify.yml --check
+  569  vi notify.yml
+  570  ansible-playbook notify.yml --check
+  571  vi notify.yml
+  572  ansible-playbook notify.yml --check
+  573  ansible-playbook notify.yml
+  574  vi notify.yml
+  575  ansible-playbook notify.yml --check
+  576  ansible-playbook notify.yml
+  577  vi notify.yml
+  578  ansible-playbook notify.yml
+  579  ansible all --list-hosts
+  580  cat /etc/ansible/hosts
+  581  cd ansible/playbooks/
+  582  vi vault.yml
+  583  ansible-vault create secure.yml
+  584  cat secure.yml 
+  585  ansible-vault edit secure.yml 
+  586  cat secure.yml 
+  587  ansible-vault rekey secure.yml 
+  588  ls
+  589  ansible-vault rekey secure.yml 
+  590  history > commands.txt
+  591  cat commands.txt 
+  592  ansible-vault decrypt secure.yml 
+  593  ls
+  594  cat secure.yml 
+  595  history > commands.txt

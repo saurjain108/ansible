@@ -1,0 +1,17 @@
+--- #prompt example
+- hosts: apacheweb
+  user: test
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks: 
+  vars:
+    - playbook_version: 0.1a
+  vars_prompt:
+    - name: pkgtoinstall
+      prompt: Name of package to install ?
+      default: telnet
+      private: no
+  tasks:
+    - name: Install the given package
+      yum: pkg={{ pkgtoinstall }} state=latest

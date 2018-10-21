@@ -1,0 +1,10 @@
+--- #included task examples
+- hosts: apacheweb
+  user: test
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+    - include: plays/packages.yml
+    - name: verifying the packages are installed or not
+      raw: yum list installed | grep telnet > /home/test/pkgs.log
