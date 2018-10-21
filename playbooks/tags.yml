@@ -1,0 +1,18 @@
+--- #for tags-function
+- hosts: apacheweb
+  user: test
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+    - name: Installing telnet lynx packages
+      yum: pkg={{ item }} state=latest
+      with_items:
+        - telnet
+        - lynx
+      tags:
+        - packages
+    - name: Verifying the telnet and lynx are installed
+      raw: yum list installed | grep telnet > /home/test/pkg.txt.log
+      tags:
+        - verification

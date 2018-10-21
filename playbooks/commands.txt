@@ -593,3 +593,39 @@
   593  ls
   594  cat secure.yml 
   595  history > commands.txt
+  596  ansible-vault encrypt vault.yml secure.yml 
+  597  cat secure.yml 
+  598  ansible all --list-hosts
+  599  vi prompt.yml
+  600  ansible-playbook prompt.yml --check
+  601  vi prompt.yml
+  602  ansible-playbook prompt.yml --check
+  603  ansible-playbook prompt.yml
+  604  cat prompt.
+  605  cat prompt.yml 
+  606  mkdir plays
+  607  cd plays/
+  608  vi packages.yml
+  609  cd ..
+  610  vi include-plays.yml
+  611  ansible-playbook include-plays.yml 
+  612  vi include-plays.yml
+  613  ansible-playbook include-plays.yml 
+  614  cd ..
+  615  git add *
+  616  git commit -m "adding vault prompt include"
+  617  git push
+  618  ansible-playbook include-plays.yml 
+  619  cd playbooks/
+  620  ansible-playbook include-plays.yml 
+  621  cd ansible/playbooks/
+  622  ansible-playbook include-plays.yml 
+  623  ansible all --list-hosts
+  624  cat /etc/ansible/hosts
+  625  vi tags.yml
+  626  ansible-playbook tags.yml 
+  627  ls
+  628  ansible-playbook tags.yml --tags "verification"
+  629  ansible-playbook tags.yml --skip-tags "packages"
+  630  ls | grep txt
+  631  history > commands.txt 
